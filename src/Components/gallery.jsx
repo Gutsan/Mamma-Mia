@@ -1,22 +1,25 @@
-import { dataPizzas } from "../datos"
-export const Gallery=()=>{
+import { usePizzas } from "../Hooks/PizzaHook";
+import { CardPizza } from "./CardPizza";
 
-return(
+export const Gallery = () => {
+  const { pizzas } = usePizzas();
+
+  return (
     <>
-    <h2>Pizzas</h2>
-    {
-        dataPizzas.pizzas.map((pizza)=>{
-            return(
-            <div className="cardPizza">
-            <img src={pizza.src} alt={pizza.alt} />
-            <h3>{pizza.nombre.toLocaleUpperCase()}</h3>
-            <p>{pizza.ingredientes.join(" ")}</p>
-            <h4>{pizza.precio}</h4>
-            </div>
-            )
-        })
-    }</>
-
-)
-
-}
+      <h2 className="titleSection">Pizzas</h2>
+      <section className="galleryPizzas">
+        {pizzas.map((pizza) => {
+          return (
+            <CardPizza
+              key={pizza.id}
+              name={pizza.name}
+              img={pizza.img}
+              ingredients={pizza.ingredients}
+              price={pizza.price.family}
+            />
+          );
+        })}
+      </section>
+    </>
+  );
+};

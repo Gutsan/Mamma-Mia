@@ -1,31 +1,61 @@
 @font-face {
-    font-family: OpenSansConde;
-    src: url("assets/open-sans-condensed.bold.ttf");
+  font-family: OpenSansConde;
+  src: url("assets/open-sans-condensed.bold.ttf");
 }
-:root{
-    margin: 0;
-    padding: 0;
-    font-family: OpenSansConde, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+:root {
+  margin: 0;
+  padding: 0;
+  font-family: OpenSansConde, "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
 }
-.cardPizza{
-    width: 18rem;
-    height: 18rem;
-    border: 0.5px solid #7070701f;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
+.titleSection {
+  font-size: 2rem;
 }
-.cardPizza img{
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
+.galleryPizzas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.cardPizza {
+  width: 18rem;
+  height: 16rem;
+  border: 1px solid #7070701f;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.containInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 
-.cardPizza h3{
-    font-size: 1.5rem;
+.cardPizza img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
 }
 
-.cardPizza p {
-    color: gray;
+.cardPizza .containInfo h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.cardPizza .containInfo p {
+  margin: 0;
+  color: gray;
+  margin-bottom: 0.8rem;
+}
+.cardPizza .containInfo button {
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  background-color: #3fae7f;
+  color: #fff;
+  border-radius: 50px;
+  padding: 8px 12px 8px 16px;
+  font-size: 0.9rem;
+}
+.cardPizza .containInfo button:hover {
+  background-color: #1f553f;
 }
