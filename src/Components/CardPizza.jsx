@@ -1,22 +1,20 @@
 import { useContext } from "react";
 import { CardContex } from "../Context/CardContex";
+import { formatter } from "../logic/function";
 
 /* eslint-disable react/prop-types */
 export const CardPizza = ({ name, img, ingredients, price }) => {
-  const formatter = new Intl.NumberFormat("es-CL", {
-    style: "currency",
-    currency: "CLP",
-  });
   const { order, setOrder } = useContext(CardContex);
   const handleClick = () => {
+    const total = price;
     const newOrder = {
       idOrder: "",
-      name: { name },
-      price: { price },
+      name: name,
+      priceOrder: price,
       quantity: 1,
-      //total:()=>price*quantity
+      total: total,
     };
-    setOrder(...order, newOrder);
+    setOrder([...order, newOrder]);
   };
   return (
     <div className="cardPizza">

@@ -1,19 +1,19 @@
-export const ElementCart=({idOrder,name,price,quantity,total})=>{
+import { formatter } from "../logic/function";
 
-return(
-<div>
-    <div>
-        
-<h3>{name}</h3>
-<div className="card-modf-qty">
-    <button className="card-btn-qty">-</button>
-    <p>{quantity}</p>
-    <button className="card-btn-qty">+</button>
-</div>
-</div>
-<p>
-    {total}
-</p>
-</div>
-)
-}
+/* eslint-disable react/prop-types */
+export const ElementCart = ({ name, quantity, total }) => {
+  return (
+    <div className="element-Cart">
+      <div className="title-element">
+        <h3>{name.toLocaleUpperCase()}</h3>
+        <div className="element-qty">
+          <button>-</button>
+          <p>{quantity}</p>
+          <button>+</button>
+        </div>
+      </div>
+      <p></p>
+      <p>{formatter.format(total)}</p>
+    </div>
+  );
+};
