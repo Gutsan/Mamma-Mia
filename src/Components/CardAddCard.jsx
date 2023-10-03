@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-export const CardPizza = ({ name, img, ingredients, price }) => {
+export const CardAddCart = ({ name, img, ingredients, price }) => {
   const formatter = new Intl.NumberFormat("es-CL", {
     style: "currency",
     currency: "CLP",
@@ -7,7 +7,7 @@ export const CardPizza = ({ name, img, ingredients, price }) => {
   const handleClick = () => {};
 
   return (
-    <div className="cardPizza">
+    <div className="cardAddCart">
       <img src={img} alt={name} />
       <div className="containInfo">
         <h3>{name.toLocaleUpperCase()}</h3>

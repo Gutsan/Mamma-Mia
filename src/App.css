@@ -59,3 +59,47 @@
 .cardPizza .containInfo button:hover {
   background-color: #1f553f;
 }
+
+.cardPizza {
+  width: 18rem;
+  height: 16rem;
+  border: 1px solid #7070701f;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.containInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.cardPizza img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+/* CARD ADD CART */
+.cardPizza .containInfo h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.cardPizza .containInfo p {
+  margin: 0;
+  color: gray;
+  margin-bottom: 0.8rem;
+}
+.cardPizza .containInfo button {
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  background-color: #3fae7f;
+  color: #fff;
+  border-radius: 50px;
+  padding: 8px 12px 8px 16px;
+  font-size: 0.9rem;
+}
+.cardPizza .containInfo button:hover {
+  background-color: #1f553f;
+}
