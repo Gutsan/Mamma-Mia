@@ -1,8 +1,10 @@
-import { usePizzas } from "../Hooks/PizzaHook";
+
+import { useContext } from "react";
 import { CardPizza } from "./CardPizza";
+import { PizzaContex } from "../Context/PizzasContext";
 
 export const Gallery = () => {
-  const { pizzas } = usePizzas();
+  const { pizzas } = useContext(PizzaContex);
 
   return (
     <>
@@ -12,6 +14,7 @@ export const Gallery = () => {
           return (
             <CardPizza
               key={pizza.id}
+              id={pizza.id}
               name={pizza.name}
               img={pizza.img}
               ingredients={pizza.ingredients}
