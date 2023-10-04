@@ -2,7 +2,7 @@ import { IconMinus, IconPlus } from "@tabler/icons-react";
 import { formatter } from "../logic/function";
 
 /* eslint-disable react/prop-types */
-export const ElementCart = ({ name, quantity, total }) => {
+export const ElementCart = ({ name, quantity, total, size,price }) => {
   const handleClickPlus = () => (quantity = quantity + 1);
   const handleClickMinus = () =>
     quantity === 1 ? (quantity = 1) : (quantity = quantity - 1);
@@ -21,7 +21,7 @@ export const ElementCart = ({ name, quantity, total }) => {
           </button>
         </div>
       </div>
-      <p></p>
+      <h4>{size==="mid"?"Mediana":size==="famiy"?"Familiar":"Extra Grande"}   {formatter.format(price)}</h4>
       <p>{formatter.format(total)}</p>
     </div>
   );

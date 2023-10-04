@@ -7,6 +7,17 @@
   padding: 0;
   font-family: OpenSansConde, "Gill Sans", "Gill Sans MT", Calibri,
     "Trebuchet MS", sans-serif;
+    background-color: #f5f5f5;
+}
+main{
+  display: flex;
+  justify-content: center;
+  
+}
+.card-Cart{
+  display: flex;
+  flex-direction: column
+  
 }
 button {
   margin: 0;
@@ -24,12 +35,21 @@ button {
 button:hover {
   background-color: #1f553f;
 }
+.gallery{
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
 .titleSection {
   font-size: 2rem;
 }
+
 .galleryPizzas {
   display: flex;
   flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
   gap: 10px;
 }
 .cardPizza {
@@ -69,49 +89,13 @@ button:hover {
   background-color: #1f553f;
 }
 
-.cardPizza {
-  width: 18rem;
-  height: 16rem;
-  border: 1px solid #7070701f;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-}
+
 .containInfo {
   display: flex;
   flex-direction: column;
   padding: 1rem;
 }
 
-.cardPizza img {
-  width: 100%;
-  height: 50%;
-  object-fit: cover;
-}
-/* CARD ADD CART */
-.cardPizza .containInfo h3 {
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-.cardPizza .containInfo p {
-  margin: 0;
-  color: gray;
-  margin-bottom: 0.8rem;
-}
-.cardPizza .containInfo button {
-  margin: 0;
-  border: none;
-  cursor: pointer;
-  background-color: #3fae7f;
-  color: #fff;
-  border-radius: 50px;
-  padding: 8px 12px 8px 16px;
-  font-size: 0.9rem;
-}
-.cardPizza .containInfo button:hover {
-  background-color: #1f553f;
-}
 
 /* CardCArt */
 .element-cart {
@@ -155,9 +139,8 @@ button:hover {
   color: #3fae7f;
 }
 .card-pizza-details {
-  width: 80rem;
+  width: 70rem;
   height: 30rem;
-
   display: flex;
 }
 .card-pizza-details img {
@@ -172,11 +155,12 @@ h2 {
   font-size: 2rem;
 }
 .containInfo {
-  max-width: 70%;
+  max-width: 60%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  
 }
 .card-pizza-details .secction-size {
   display: flex;

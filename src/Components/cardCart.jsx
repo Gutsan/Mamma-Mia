@@ -1,21 +1,26 @@
 import { useContext } from "react";
 import { CardContex } from "../Context/CardContex";
 import { ElementCart } from "./ElementCart";
+import { formatter } from "../logic/function";
 
 export const CardCart = () => {
-  const { order } = useContext(CardContex);
+  const { order,totalOrder } = useContext(CardContex);
 
   return (
-    <>
+    <section className="card-Cart">
       <h3>TU ORDEN</h3>
       {order.map((ord) => (
         <ElementCart
-          key={ord.name}
+          key={ord.idOrder}
           name={ord.name}
           quantity={ord.quantity}
           total={ord.total}
+          size={ord.size}
+          price={ord.priceOrder}
         />
       ))}
-    </>
+      <h3>Total</h3>
+      <h2>{formatter.format(totalOrder)}</h2>
+    </section>
   );
 };

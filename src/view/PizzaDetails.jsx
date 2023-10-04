@@ -1,13 +1,17 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { PizzaContex } from "../Context/PizzasContext";
-import { formatter } from "../logic/function";
+import { addOrderCart, calculateTotal, formatter} from "../logic/function";
 import {
   IconArrowBack,
   IconMinus,
   IconPlus,
   IconShoppingCartPlus,
 } from "@tabler/icons-react";
+import { CardCart } from "../Components/cardCart";
+import { CardContex } from "../Context/CardContex";
+
+
 export const PizzaDetails = () => {
   const { pizzas } = useContext(PizzaContex);
   const { IdPizza } = useParams();
@@ -15,6 +19,7 @@ export const PizzaDetails = () => {
   const { desc, id, img, ingredients, name, price } = pizzas[index];
   const [isSelectSize, setIsSeelectSize] = useState([false, false, false]);
   const [valuePriceSelect, SetValuePriceSelect] = useState(0);
+  const [sizeSelect,setSizeSelect]=useState("")
   const [quantity, setQuantity] = useState(1);
   const [total, setTotal] = useState(0);
   const classSelect = "inp-pizza inp-select";
@@ -25,31 +30,41 @@ export const PizzaDetails = () => {
     setTotal(newTotal);
   }, [quantity, valuePriceSelect]);
 
-  const handleClick = (e) => {
+  const handleClickSize = (e) => {
     if (e.target.closest("div").id === "mid") {
       const newSelect = [true, false, false];
       setIsSeelectSize(newSelect);
       SetValuePriceSelect(price["mid"]);
+      setSizeSelect("mid")
     } else if (e.target.closest("div").id === "family") {
       const newSelect = [false, true, false];
       setIsSeelectSize(newSelect);
       SetValuePriceSelect(price["family"]);
+      setSizeSelect("family")
     } else {
       const newSelect = [false, false, true];
       setIsSeelectSize(newSelect);
       SetValuePriceSelect(price["xg"]);
+      setSizeSelect("xg")
     }
   };
   const handleClickPlus = () => setQuantity(quantity + 1);
   const handleClickMinus = () =>
     quantity === 1 ? setQuantity(1) : setQuantity(quantity - 1);
-  const handleclickAddCart = () => {};
+
+  const { order, setOrder,setTotalOrder,setCountOrder } = useContext(CardContex);
+  const navigate=useNavigate()
+  const handleclickAddCart = () => {
+    if(sizeSelect!=""){
+    addOrderCart(IdPizza,name,sizeSelect,valuePriceSelect,quantity,total,order,setOrder)
+    calculateTotal(order,setTotalOrder,setCountOrder)
+    navigate("/")
+  }
+  }
   return (
     <main>
-      <Link to="/" className="btn-Volver">
-        <IconArrowBack /> Volver
-      </Link>
-
+    
+    <section >
       <div className="card-pizza-details">
         <img src={img} alt={name} />
         <div className="containInfo">
@@ -64,7 +79,7 @@ export const PizzaDetails = () => {
           <div className="secction-size">
             <div
               className={isSelectSize[0] ? classSelect : classNoSelect}
-              onClick={handleClick}
+              onClick={handleClickSize}
               id="mid"
             >
               <p>Mediana</p>
@@ -72,7 +87,7 @@ export const PizzaDetails = () => {
             </div>
             <div
               className={isSelectSize[1] ? classSelect : classNoSelect}
-              onClick={handleClick}
+              onClick={handleClickSize}
               id="family"
             >
               <p>Familiar</p>
@@ -80,7 +95,7 @@ export const PizzaDetails = () => {
             </div>
             <div
               className={isSelectSize[2] ? classSelect : classNoSelect}
-              onClick={handleClick}
+              onClick={handleClickSize}
               id="xg"
             >
               <p>Extra Grande</p>
@@ -105,6 +120,11 @@ export const PizzaDetails = () => {
           </div>
         </div>
       </div>
+      <Link to="/" className="btn-Volver">
+        <IconArrowBack /> Volver
+      </Link>
+    </section>
+    <CardCart/>
     </main>
   );
 };

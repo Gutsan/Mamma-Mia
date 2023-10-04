@@ -7,7 +7,7 @@ export const Gallery = () => {
   const { pizzas } = useContext(PizzaContex);
 
   return (
-    <>
+    <section className="gallery">
       <h2 className="titleSection">Pizzas</h2>
       <section className="galleryPizzas">
         {pizzas.map((pizza) => {
@@ -23,6 +23,6 @@ export const Gallery = () => {
           );
         })}
       </section>
-    </>
+    </section>
   );
 };

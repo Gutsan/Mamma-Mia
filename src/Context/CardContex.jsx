@@ -4,18 +4,19 @@ export const CardContex = createContext({});
 
 export function CardContexProvider({ children }) {
   const [order, setOrder] = useState([]);
-
+  const [totalOrder,setTotalOrder]=useState(0);
+  const [countOrder,setCountOrder]=useState(0)
   return (
-    <CardContex.Provider value={{ order, setOrder }}>
+    <CardContex.Provider value={{ order, setOrder,totalOrder,setTotalOrder,countOrder,setCountOrder }}>
       {children}
     </CardContex.Provider>
   );
 }
 // {
-//   product: "",
+//   idOrder:""
+//   name: "",
 //   size: "",
-//   type: "",
+//   priceOrder: 0,
 //   quanty: 0,
-//   price: 0,
 //   total: 0,
 // },
