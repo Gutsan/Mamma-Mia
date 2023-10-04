@@ -8,6 +8,22 @@
   font-family: OpenSansConde, "Gill Sans", "Gill Sans MT", Calibri,
     "Trebuchet MS", sans-serif;
 }
+button {
+  margin: 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #3fae7f;
+  color: #fff;
+  padding: 8px 12px 8px 16px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button:hover {
+  background-color: #1f553f;
+}
 .titleSection {
   font-size: 2rem;
 }
@@ -47,14 +63,7 @@
   margin-bottom: 0.8rem;
 }
 .cardPizza .containInfo button {
-  margin: 0;
-  border: none;
-  cursor: pointer;
-  background-color: #3fae7f;
-  color: #fff;
   border-radius: 50px;
-  padding: 8px 12px 8px 16px;
-  font-size: 0.9rem;
 }
 .cardPizza .containInfo button:hover {
   background-color: #1f553f;
@@ -119,9 +128,13 @@
   color: #3fae7f;
   border: solid 1px #3fae7f;
   border-radius: 100%;
-  height: 20px;
-  width: 20px;
+  max-height: 30px;
+  max-width: 30px;
   background-color: #fff;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .element-qty-cart button:hover {
   color: #fff;
@@ -137,17 +150,73 @@
   color: #3fae7f;
 }
 
-
 /* DETAILS PIZZA */
-
-.card-pizza-details{
+.btn-Volver {
+  color: #3fae7f;
+}
+.card-pizza-details {
   width: 80rem;
-  height: ;
-  border: solid 1px #1f553f;
+  height: 30rem;
+
   display: flex;
 }
-.card-pizza-details img{
-width:20rem ;
-height: 20rem;
-object-fit: cover;
+.card-pizza-details img {
+  width: 25%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-pizza-details h3,
+h2 {
+  margin: 0;
+  color: #3fae7f;
+  font-size: 2rem;
+}
+.containInfo {
+  max-width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-pizza-details .secction-size {
+  display: flex;
+  gap: 10px;
+}
+.card-pizza-details .inp-pizza {
+  border: solid 1px #3fae7f;
+  width: 8rem;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-pizza-details .inp-pizza:hover {
+  background-color: #3fae7f;
+  color: #fff;
+  cursor: pointer;
+}
+.card-pizza-details .inp-pizza p {
+  margin: 0;
+}
+.inp-select {
+  background-color: #3fae7f;
+  color: #fff;
+}
+.inp-no-select {
+  background-color: #fff;
+}
+.Section-addCart {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+}
+.total-Order {
+  color: #3fae7f;
+  font-size: 2rem;
+}
+.Section-addCart button {
+  height: 3rem;
 }
