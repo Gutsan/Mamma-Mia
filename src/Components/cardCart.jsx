@@ -7,7 +7,7 @@ export const CardCart = () => {
   const { order,totalOrder } = useContext(CardContex);
 
   return (
-    <section className="card-Cart">
+    <section className="section-cart">
       <h3>TU ORDEN</h3>
       {order.map((ord) => (
         <ElementCart

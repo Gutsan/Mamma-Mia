@@ -39,7 +39,7 @@ button:hover {
   background-color: #fff;
   min-width: 250px;  
   border-radius: 5px;
-  box-shadow: 1px 1px 0.5px 0.5px #dbdbdb;
+  box-shadow: 1px 1px 4px 0px #dbdbdb;
 }
 .section-menu{
   background-color: #fff;
@@ -48,7 +48,7 @@ button:hover {
   max-width: 65%;
   min-height: min-content;
   border-radius: 5px;
-  box-shadow: 1px 1px 0.5px 0px #dbdbdb;
+  box-shadow: 1px 1px 4px 0px #dbdbdb;
 }
 .titleSection {
   font-size: 2rem;
