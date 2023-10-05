@@ -9,7 +9,7 @@ export const CardCart = () => {
   return (
     <section className="section-cart">
       <h3>TU ORDEN</h3>
-      {order.map((ord) => (
+      {order.map((ord,index) => (
         <ElementCart
           key={ord.idOrder}
           name={ord.name}
@@ -17,6 +17,8 @@ export const CardCart = () => {
           total={ord.total}
           size={ord.size}
           price={ord.priceOrder}
+          index={index}
+          idOrder={ord.idOrder}
         />
       ))}
       <h3>Total</h3>

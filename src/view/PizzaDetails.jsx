@@ -16,7 +16,7 @@ export const PizzaDetails = () => {
   const { pizzas } = useContext(PizzaContex);
   const { IdPizza } = useParams();
   const index = pizzas.findIndex((pizza) => pizza.id === IdPizza);
-  const { desc, id, img, ingredients, name, price } = pizzas[index];
+  const { desc, img, ingredients, name, price } = pizzas[index];
   const [isSelectSize, setIsSeelectSize] = useState([false, false, false]);
   const [valuePriceSelect, SetValuePriceSelect] = useState(0);
   const [sizeSelect,setSizeSelect]=useState("")
