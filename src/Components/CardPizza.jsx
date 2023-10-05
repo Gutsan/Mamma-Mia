@@ -8,15 +8,15 @@ export const CardPizza = ({ id,name, img, ingredients, price }) => {
   const { order, setOrder } = useContext(CardContex);
   
   const handleClick = () => {
-    const total = price;
-    const newOrder = {
-      idOrder: "",
-      name: name,
-      priceOrder: price,
-      quantity: 1,
-      total: total,
-    };
-    setOrder([...order, newOrder]);
+    // const total = price;
+    // const newOrder = {
+    //   idOrder: "",
+    //   name: name,
+    //   priceOrder: price,
+    //   quantity: 1,
+    //   total: total,
+    // };
+    // setOrder([...order, newOrder]);
   };
   const navigate=useNavigate()
   const handleClickCard=()=>{

@@ -2,13 +2,15 @@
   font-family: OpenSansConde;
   src: url("assets/open-sans-condensed.bold.ttf");
 }
+
 :root {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   font-family: OpenSansConde, "Gill Sans", "Gill Sans MT", Calibri,
     "Trebuchet MS", sans-serif;
     background-color: #f5f5f5;
 }
+
 main{
   display: flex;
   justify-content: center;
@@ -45,7 +47,8 @@ button:hover {
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  max-width: 65%;
+  max-width: 60rem;
+  width: fit-content;
   min-height: min-content;
   border-radius: 5px;
   box-shadow: 1px 1px 4px 0px #dbdbdb;
@@ -53,7 +56,8 @@ button:hover {
 .titleSection {
   font-size: 2rem;
   color: #3fae7f;
-  padding: 10px;
+  padding-top: 10px;
+  padding-left: 4%;
 }
 
 .gallery-menu {
@@ -84,6 +88,7 @@ button:hover {
   width: 100%;
   height: 45%;
   object-fit: cover;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .card-menu-title {
@@ -217,4 +222,66 @@ h2 {
 }
 .Section-addCart button {
   height: 3rem;
+}
+header{
+  min-height:80px ;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+
+}
+header .inp-searcher{
+  flex-grow: 1;
+  background-color:  #ffffff;
+  border-radius: 4px;
+  height: 60px;
+  box-shadow: 1px 1px 4px 0px #dbdbdb;
+  
+}
+header input{
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+header input:focus{
+  border: 1px solid #3fae7f;
+}
+
+.card-address{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 220px;
+  height: 40px;
+  color:#717171;
+  background-color: #fff;
+  padding: 10px 40px 10px 15px;
+  box-shadow: 1px 1px 4px 0px #dbdbdb;
+}
+.card-address p{
+  margin: 0;
+}
+.card-address h6{
+  margin: 0;
+}
+.btn-cart{
+  height: 60px;
+  width: 60px;
+  position: relative;
+}
+.num-cart{
+  height: 20px;
+  width: 20px;
+  top: -10px;
+  right:0;
+  background-color: #1f553f;
+  position: absolute;
+  border: #ffffff solid 2px;
+  border-radius: 100%;
+  padding: 2px;
 }
