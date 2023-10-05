@@ -12,13 +12,10 @@
 main{
   display: flex;
   justify-content: center;
-  
+  flex-wrap: wrap;
+  gap: 20px;
 }
-.card-Cart{
-  display: flex;
-  flex-direction: column
-  
-}
+
 button {
   margin: 0;
   border: none;
@@ -35,52 +32,69 @@ button {
 button:hover {
   background-color: #1f553f;
 }
-.gallery{
+.section-cart{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  min-width: 250px;  
+  border-radius: 5px;
+  box-shadow: 1px 1px 0.5px 0.5px #dbdbdb;
+}
+.section-menu{
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  max-width: 65%;
+  min-height: min-content;
+  border-radius: 5px;
+  box-shadow: 1px 1px 0.5px 0px #dbdbdb;
 }
 .titleSection {
   font-size: 2rem;
+  color: #3fae7f;
+  padding: 10px;
 }
 
-.galleryPizzas {
+.gallery-menu {
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
   gap: 10px;
 }
-.cardPizza {
+.card-menu {
   width: 18rem;
-  height: 16rem;
+  height: 17rem;
   border: 1px solid #7070701f;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
 }
-.containInfo {
+.card-menu-info {
   display: flex;
   flex-direction: column;
+  flex-grow: 2;
   padding: 1rem;
+  justify-content: space-between;
 }
 
-.cardPizza img {
+.card-menu-img{
   width: 100%;
   height: 45%;
   object-fit: cover;
 }
 
-.cardPizza .containInfo h3 {
+.card-menu-title {
   font-size: 1.5rem;
   margin: 0;
 }
 
-.cardPizza .containInfo p {
+.card-menu-det {
   margin: 0;
   color: gray;
-  margin-bottom: 0.8rem;
+  
 }
 .cardPizza .containInfo button {
   border-radius: 50px;

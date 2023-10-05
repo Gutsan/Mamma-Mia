@@ -24,11 +24,11 @@ export const CardPizza = ({ id,name, img, ingredients, price }) => {
       navigate(ruta)
   }
   return (
-    <div className="cardPizza" onClick={handleClickCard}>
-      <img src={img} alt={name} />
-      <div className="containInfo">
-        <h3>{name.toLocaleUpperCase()}</h3>
-        <p>{ingredients.join(" ")}</p>
+    <div className="card-menu" onClick={handleClickCard}>
+      <img src={img} alt={name} className="card-menu-img"/>
+      <div className="card-menu-info">
+        <h3 className="card-menu-title">{name.toLocaleUpperCase()}</h3>
+        <p className="card-menu-det">{ingredients.join(" ")}</p>
         <button onClick={handleClick}>
           FAMILIAR DESDE {formatter.format(price)}
         </button>

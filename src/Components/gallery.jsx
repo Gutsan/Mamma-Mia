@@ -7,9 +7,9 @@ export const Gallery = () => {
   const { pizzas } = useContext(PizzaContex);
 
   return (
-    <section className="gallery">
+    <section className="section-menu">
       <h2 className="titleSection">Pizzas</h2>
-      <section className="galleryPizzas">
+      <section className="gallery-menu">
         {pizzas.map((pizza) => {
           return (
             <CardPizza
