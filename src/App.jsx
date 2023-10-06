@@ -7,6 +7,7 @@ import { PizzaContexProvider } from "./Context/PizzasContext";
 import { Header } from "./Components/Header";
 import { HeroSection } from "./Components/Hero-Section";
 import { Cart } from "./view/Cart";
+import { Footer } from "./Components/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/:IdPizza" element={<PizzaDetails />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>
+          <Footer/>
         </CardContexProvider>
       </PizzaContexProvider>
     </BrowserRouter>

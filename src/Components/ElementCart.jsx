@@ -19,7 +19,7 @@ export const ElementCart = ({ name, quantity, total, size, price, index }) => {
     }
   };
   return (
-    <div className="element-cart">
+    <div className="element-cart no-mobil">
       <div className="title-element-cart">
         <h3>{name.toLocaleUpperCase()}</h3>
         <div className="element-qty-cart">

@@ -1,44 +1,42 @@
 import { IconCash, IconCreditCard } from "@tabler/icons-react";
 import { CardCart } from "../Components/cardCart";
+import { IconBrandPaypal } from "@tabler/icons-react";
 
 export const Cart = () => {
   const direcccion = "calle";
   return (
     <main>
       <section className="container-details-cart">
-        <section className="card-entrega">
+        <section className="card-delivery">
           <h3>DETALLE DE ENTREGA</h3>
-          <div>{direcccion}</div>
+          <p>{direcccion}</p>
         </section>
-        <section>
+        <section className="card-delivery">
           <h3>DATOS PERSONALES</h3>
-          <div>
-            <input type="text" />
-            <input type="email" />
-            <input type="number" />
+          <div className="form-dat-user">
+            <input type="text"  className="inp-info-user" placeholder="Tu nombre"/>
+            <input type="email" className="inp-info-user" placeholder="Tu correo" />
+            <input type="tel" className="inp-info-user" placeholder="Tu teléfono"/>
             <></>
           </div>
         </section>
-        <section>
+        <section className="card-delivery">
           <h3>MÉTODOS DE PAGO</h3>
-          <div>
-            <img
-              src="https://www.svgrepo.com/show/517750/mercado-pago.svg"
-              alt="mercadoPago"
-            />
+          <div className="payment-method">
+            <div className="btn-payment">
+              <IconBrandPaypal />
+              <h4>PayPal</h4>
+            </div>
+            <div className="btn-payment">
+              <IconCash />
+              <h4>Efectivo</h4>
+            </div>
+            <div className="btn-payment">
+              <IconCreditCard />
+              <h4>Tarjeta</h4>
+            </div>
           </div>
-          <div>
-            <img
-              src="https://iconape.com/wp-content/files/cz/352546/png/webpay-logo.png"
-              alt="mercadoPago"
-            />
-          </div>
-          <div>
-            <IconCash />
-          </div>
-          <div>
-            <IconCreditCard />
-          </div>
+          <button>Confirmar pedido</button>
         </section>
       </section>
       <CardCart />
