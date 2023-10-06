@@ -8,14 +8,14 @@
   padding: 0px;
   font-family: OpenSansConde, "Gill Sans", "Gill Sans MT", Calibri,
     "Trebuchet MS", sans-serif;
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
-body{
+body {
   width: 100vw;
   display: flex;
   justify-content: center;
 }
-main{
+main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -38,21 +38,20 @@ button {
 button:hover {
   background-color: #1f553f;
 }
-.section-cart{
+.section-cart {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fff;
-  min-width: 250px;  
+  min-width: 250px;
   border-radius: 5px;
   box-shadow: 1px 1px 4px 0px #dbdbdb;
 }
-.section-menu{
+.section-menu {
   background-color: #fff;
   display: flex;
   flex-direction: column;
   max-width: 60rem;
-  width: fit-content;
   min-height: min-content;
   border-radius: 5px;
   box-shadow: 1px 1px 4px 0px #dbdbdb;
@@ -88,7 +87,7 @@ button:hover {
   justify-content: space-between;
 }
 
-.card-menu-img{
+.card-menu-img {
   width: 100%;
   height: 45%;
   object-fit: cover;
@@ -103,22 +102,7 @@ button:hover {
 .card-menu-det {
   margin: 0;
   color: gray;
-  
 }
-.cardPizza .containInfo button {
-  border-radius: 50px;
-}
-.cardPizza .containInfo button:hover {
-  background-color: #1f553f;
-}
-
-
-.containInfo {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-}
-
 
 /* CardCArt */
 .element-cart {
@@ -165,6 +149,10 @@ button:hover {
   width: 70rem;
   height: 30rem;
   display: flex;
+  gap: 20px;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0px #dbdbdb;
+  border-radius: 5px;
 }
 .card-pizza-details img {
   width: 25%;
@@ -178,12 +166,11 @@ h2 {
   font-size: 2rem;
 }
 .containInfo {
-  max-width: 60%;
+  max-width: 70%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
 }
 .card-pizza-details .secction-size {
   display: flex;
@@ -227,25 +214,24 @@ h2 {
 .Section-addCart button {
   height: 3rem;
 }
-header{
-  min-height:80px ;
+header {
+  min-height: 80px;
   min-width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   gap: 20px;
-
 }
-header .inp-searcher{
+header .inp-searcher {
   flex-grow: 1;
-  background-color:  #ffffff;
+  background-color: #ffffff;
   border-radius: 4px;
   height: 60px;
   box-shadow: 1px 1px 4px 0px #dbdbdb;
   position: sticky;
   top: 0;
 }
-header input{
+header input {
   border: none;
   border-radius: 4px;
   font-size: 16px;
@@ -253,50 +239,60 @@ header input{
   width: 100%;
   padding: 20px;
 }
-header input:focus{
+header input:focus {
   border: 1px solid #3fae7f;
 }
 
-.card-address{
+.card-address {
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-width: 220px;
   height: 40px;
-  color:#717171;
+  color: #717171;
   background-color: #fff;
   padding: 10px 40px 10px 15px;
   box-shadow: 1px 1px 4px 0px #dbdbdb;
 }
-.card-address p{
+.card-address p {
   margin: 0;
 }
-.card-address h6{
+.card-address h6 {
   margin: 0;
 }
-.btn-cart{
+.btn-cart {
   height: 60px;
   width: 60px;
   position: relative;
 }
-.num-cart{
+.num-cart {
   height: 20px;
   width: 20px;
   top: -10px;
-  right:0;
+  right: 0;
   background-color: #1f553f;
   position: absolute;
   border: #ffffff solid 2px;
   border-radius: 100%;
   padding: 2px;
 }
-.hero-section{
- width: 100%;
- height: 250px;
- margin-bottom: 20px;
-}
-.hero-section img{
+.hero-section {
   width: 100%;
-  height: 100% ;
+  height: 250px;
+  margin-bottom: 20px;
+}
+.hero-section img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+/* VIEW CART */
+.card-entrega {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 #00000026;
+  padding: 20px;
+}
+.container-details-cart {
+  width: 1;
 }
