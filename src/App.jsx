@@ -15,7 +15,6 @@ function App() {
       <PizzaContexProvider>
         <CardContexProvider>
           <Header />
-          <HeroSection />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/:IdPizza" element={<PizzaDetails />} />
