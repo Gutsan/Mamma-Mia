@@ -10,10 +10,9 @@
     "Trebuchet MS", sans-serif;
   background-color: #f5f5f5;
 }
-body{
+body {
   display: flex;
   justify-content: center;
-  
 }
 #root {
   width: 100vw;
@@ -47,7 +46,7 @@ header {
   height: 250px;
   /* margin-bottom: 20px; */
 }
-footer{
+footer {
   background-color: #ba151a;
   color: #fff;
   width: 100%;
@@ -58,7 +57,6 @@ footer{
   justify-content: center;
   gap: 20px;
 }
-
 
 button {
   margin: 0;
@@ -76,7 +74,7 @@ button {
 button:hover {
   background-color: #1f553f;
 }
-.box{
+.box {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 1px 1px 4px 0px #dbdbdb;
@@ -92,117 +90,6 @@ button:hover {
   font-size: 1.5rem;
   color: #000000;
   margin: 0;
-}
-
-/* CardCArt */
-.element-cart {
-  width: 200px;
-  margin: 0;
-  border-bottom: solid 2px #dfdfdf;
-}
-.element-qty-cart {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-.element-qty-cart button {
-  color: #3fae7f;
-  border: solid 1px #3fae7f;
-  border-radius: 100%;
-  max-height: 30px;
-  max-width: 30px;
-  background-color: #fff;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.element-qty-cart button:hover {
-  color: #fff;
-  background-color: #3fae7f;
-}
-.title-element-cart {
-  display: flex;
-  justify-content: space-between;
-}
-.element-cart > p {
-  text-align: right;
-  margin: 0;
-  color: #3fae7f;
-}
-
-/* DETAILS PIZZA */
-.btn-Volver {
-  color: #3fae7f;
-}
-.card-pizza-details {
-  width: 70rem;
-  height: 30rem;
-  display: flex;
-  gap: 20px;
-  background-color: #fff;
-  box-shadow: 1px 1px 4px 0px #dbdbdb;
-  border-radius: 5px;
-}
-.card-pizza-details img {
-  width: 25%;
-  height: 100%;
-  object-fit: cover;
-}
-.card-pizza-details h3,
-h2 {
-  margin: 0;
-  color: #3fae7f;
-  font-size: 2rem;
-}
-.containInfo {
-  max-width: 70%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.card-pizza-details .secction-size {
-  display: flex;
-  gap: 10px;
-}
-.card-pizza-details .inp-pizza {
-  border: solid 1px #3fae7f;
-  width: 8rem;
-  height: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.card-pizza-details .inp-pizza:hover {
-  background-color: #3fae7f;
-  color: #fff;
-  cursor: pointer;
-}
-.card-pizza-details .inp-pizza p {
-  margin: 0;
-}
-.inp-select {
-  background-color: #3fae7f;
-  color: #fff;
-}
-.inp-no-select {
-  background-color: #fff;
-}
-.Section-addCart {
-  width: 100%;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  gap: 20px;
-}
-.total-Order {
-  color: #3fae7f;
-  font-size: 2rem;
-}
-.Section-addCart button {
-  height: 3rem;
 }
 
 header .inp-searcher {
@@ -265,71 +152,18 @@ header input:focus {
   height: 100%;
   object-fit: cover;
 }
-/* VIEW CART */
-.card-delivery {
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px 0 #00000026;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.container-details-cart {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
 
-.btn-payment{
-  width: 6rem;
-  height: 5rem;
-  border: #3fae7f 1px solid;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #3fae7f;
-}
-.btn-payment:hover{
-  background-color: #3fae7f;
-  color: #fff;
-  cursor: pointer;
-}
-.btn-payment h4{
-margin: 0;
-}
-.payment-method{
-  display: flex;
-  gap: 20px; 
-}
-.inp-info-user{
-  border: #717171 solid 1px;
-  border-radius: 4px;
-  font-size: 12px;
-  height: 1rem;
-  width: 10rem;
-  padding: 5px;
-}
-.form-dat-user{
-display: flex;
-gap: 10px;
-margin-bottom: 10px;
-}
-
-
-.footer-logo{
+.footer-logo {
   width: 100px;
 }
-footer h6{
+footer h6 {
   background-color: #7d0e14;
   text-align: center;
   width: 100%;
 }
 
-@media(max-width:768px)  {
-  .no-mobil{
+@media (max-width: 768px) {
+  .no-mobil {
     display: none;
   }
 }

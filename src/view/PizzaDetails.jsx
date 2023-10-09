@@ -1,16 +1,16 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { PizzaContex } from "../Context/PizzasContext";
-import { addOrderCart, calculateTotal, formatter } from "../logic/function";
+import { formatter } from "../logic/function";
 import {
-  IconArrowBack,
+  IconArrowLeft,
   IconMinus,
   IconPlus,
   IconShoppingCartPlus,
 } from "@tabler/icons-react";
 import { CardCart } from "../Components/cardCart";
 import { CardContex } from "../Context/CardContex";
-
+import "./details.css";
 export const PizzaDetails = () => {
   const { pizzas } = useContext(PizzaContex);
   const { IdPizza } = useParams();
@@ -51,8 +51,7 @@ export const PizzaDetails = () => {
   const handleClickMinus = () =>
     quantity === 1 ? setQuantity(1) : setQuantity(quantity - 1);
 
-  const { order, setOrder, setTotalOrder, setCountOrder } =
-    useContext(CardContex);
+  const { addOrderCart } = useContext(CardContex);
   const navigate = useNavigate();
   const handleclickAddCart = () => {
     if (sizeSelect != "") {
@@ -62,20 +61,20 @@ export const PizzaDetails = () => {
         sizeSelect,
         valuePriceSelect,
         quantity,
-        total,
-        order,
-        setOrder
+        total
       );
-      calculateTotal(order, setTotalOrder, setCountOrder);
       navigate("/");
     }
   };
   return (
     <main>
-      <section className="container-details-pizza">
+      <section className="container-details-pizza box">
+        <Link to="/" className="btn-Volver">
+          <IconArrowLeft />
+        </Link>
         <div className="card-pizza-details">
           <img src={img} alt={name} />
-          <div className="containInfo">
+          <div className="card-details-info">
             <h3>{name.toLocaleUpperCase()}</h3>
             <p>{desc}</p>
             <h2>Ingredientes</h2>
@@ -110,27 +109,26 @@ export const PizzaDetails = () => {
                 <p>{formatter.format(price["xg"])}</p>
               </div>
             </div>
-            <div className="Section-addCart">
-              <div className="element-qty-cart">
-                <button onClick={handleClickMinus}>
-                  <IconMinus />
-                </button>
-                <p>{quantity}</p>
-                <button onClick={handleClickPlus}>
-                  <IconPlus />
-                </button>
-              </div>
-              <p className="total-Order">Total = {formatter.format(total)}</p>
-              <button onClick={handleclickAddCart}>
-                Añadir
-                <IconShoppingCartPlus />
-              </button>
-            </div>
           </div>
         </div>
-        <Link to="/" className="btn-Volver">
-          <IconArrowBack /> Volver
-        </Link>
+        <div className="Section-addCart">
+          <div className="element-qty-cart">
+            <button onClick={handleClickMinus}>
+              <IconMinus />
+            </button>
+            <p>{quantity}</p>
+            <button onClick={handleClickPlus}>
+              <IconPlus />
+            </button>
+          </div>
+          <p className="total-Order">
+            <span className="no-mobil">Total = </span> {formatter.format(total)}
+          </p>
+          <button onClick={handleclickAddCart}>
+            Añadir
+            <IconShoppingCartPlus />
+          </button>
+        </div>
       </section>
       <CardCart />
     </main>

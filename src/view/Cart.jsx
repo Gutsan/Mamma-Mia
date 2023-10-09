@@ -1,6 +1,7 @@
 import { IconCash, IconCreditCard } from "@tabler/icons-react";
 import { CardCart } from "../Components/cardCart";
 import { IconBrandPaypal } from "@tabler/icons-react";
+import "./cart.css";
 
 export const Cart = () => {
   const direcccion = "calle";
@@ -14,9 +15,21 @@ export const Cart = () => {
         <section className="card-delivery">
           <h3>DATOS PERSONALES</h3>
           <div className="form-dat-user">
-            <input type="text"  className="inp-info-user" placeholder="Tu nombre"/>
-            <input type="email" className="inp-info-user" placeholder="Tu correo" />
-            <input type="tel" className="inp-info-user" placeholder="Tu teléfono"/>
+            <input
+              type="text"
+              className="inp-info-user"
+              placeholder="Tu nombre"
+            />
+            <input
+              type="email"
+              className="inp-info-user"
+              placeholder="Tu correo"
+            />
+            <input
+              type="tel"
+              className="inp-info-user"
+              placeholder="Tu teléfono"
+            />
             <></>
           </div>
         </section>

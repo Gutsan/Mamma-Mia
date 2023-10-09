@@ -1,21 +1,21 @@
 import { IconMinus, IconPlus } from "@tabler/icons-react";
-import { deleteOrder, formatter, modfOrder } from "../logic/function";
+import { formatter } from "../logic/function";
 import { useContext } from "react";
 import { CardContex } from "../Context/CardContex";
 
 /* eslint-disable react/prop-types */
 export const ElementCart = ({ name, quantity, total, size, price, index }) => {
-  const { order, setOrder } = useContext(CardContex);
+  const { modfOrder, deleteOrder } = useContext(CardContex);
   const handleClickPlus = () => {
     const newQuantity = 1;
-    modfOrder(order, index, newQuantity, price, setOrder);
+    modfOrder(index, newQuantity);
   };
   const handleClickMinus = () => {
     if (quantity === 1) {
-      deleteOrder(index, order, setOrder);
+      deleteOrder(index);
     } else {
       const newQuantity = -1;
-      modfOrder(order, index, newQuantity, price, setOrder);
+      modfOrder(index, newQuantity);
     }
   };
   return (

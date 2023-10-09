@@ -1,0 +1,109 @@
+/* DETAILS PIZZA */
+
+.btn-Volver {
+  color: #3fae7f;
+  border: #3fae7f 1px solid;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-details-pizza {
+  flex-grow: 1;
+  max-width: 900px;
+  min-height: min-content;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 10px;
+}
+.card-pizza-details {
+  width: 95%;
+  min-height: max-content;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  box-sizing: content-box;
+  border-radius: 5px;
+}
+.card-pizza-details img {
+  width: 25%;
+  min-width: 250px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.card-pizza-details h3,
+h2 {
+  margin: 0;
+  color: #3fae7f;
+  font-size: 2rem;
+}
+.card-details-info {
+  height: 100%;
+  width: 60%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-pizza-details .secction-size {
+  display: flex;
+  gap: 10px;
+}
+.card-pizza-details .inp-pizza {
+  border: solid 1px #3fae7f;
+  width: 8rem;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-pizza-details .inp-pizza:hover {
+  background-color: #3fae7f;
+  color: #fff;
+  cursor: pointer;
+}
+.card-pizza-details .inp-pizza p {
+  margin: 0;
+}
+.inp-select {
+  background-color: #3fae7f;
+  color: #fff;
+}
+.inp-no-select {
+  background-color: #fff;
+}
+.Section-addCart {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+}
+.total-Order {
+  color: #3fae7f;
+  font-size: 2rem;
+}
+.Section-addCart button {
+  height: 3rem;
+}
+@media (max-width: 768px) {
+  .card-pizza-details {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .card-pizza-details img {
+    width: 100%;
+    height: 250px;
+  }
+  .card-details-info {
+    width: 100%;
+  }
+}

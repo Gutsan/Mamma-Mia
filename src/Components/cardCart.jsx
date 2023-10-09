@@ -2,14 +2,22 @@ import { useContext } from "react";
 import { CardContex } from "../Context/CardContex";
 import { ElementCart } from "./ElementCart";
 import { formatter } from "../logic/function";
+import { IconTrash } from "@tabler/icons-react";
 
 export const CardCart = () => {
-  const { order,totalOrder } = useContext(CardContex);
+  const { order, totalOrder, countOrder, clearOrder } = useContext(CardContex);
 
   return (
     <section className="section-cart">
-      <h3>TU ORDEN</h3>
-      {order.map((ord,index) => (
+      <div className="header-cart">
+        <h3 className="title-cart">TU ORDEN</h3>
+        <span className="badge-count">{countOrder}</span>
+        <button className="btn-trash" onClick={clearOrder}>
+          <IconTrash />
+        </button>
+      </div>
+
+      {order.map((ord, index) => (
         <ElementCart
           key={ord.idOrder}
           name={ord.name}
