@@ -4,7 +4,9 @@ import { createContext, useEffect, useState } from "react";
 export const CardContex = createContext({});
 
 export function CardContexProvider({ children }) {
-  const [order, setOrder] = useState([]);
+  
+  const [order, setOrder] = useState(JSON.parse(localStorage.getItem("cart")));
+  
   const [totalOrder, setTotalOrder] = useState(0);
   const [countOrder, setCountOrder] = useState(0);
 
@@ -58,6 +60,14 @@ export function CardContexProvider({ children }) {
     };
     calculateTotal();
   }, [order]);
+
+  useEffect(() => {
+    const saveDataLocalStorage=(order)=>{
+      localStorage.setItem("cart",JSON.stringify(order))
+      console.log(order)
+   }
+    saveDataLocalStorage(order)
+  },[order])
 
   return (
     <CardContex.Provider
