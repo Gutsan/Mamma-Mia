@@ -5,7 +5,7 @@ export const CardContex = createContext({});
 
 export function CardContexProvider({ children }) {
   
-  const [order, setOrder] = useState(JSON.parse(localStorage.getItem("cart")));
+  const [order, setOrder] = useState(JSON.parse(localStorage.getItem("cart"))??[]);
   
   const [totalOrder, setTotalOrder] = useState(0);
   const [countOrder, setCountOrder] = useState(0);
