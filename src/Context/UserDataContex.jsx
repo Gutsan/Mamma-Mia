@@ -5,9 +5,10 @@ export const UserDataContex = createContext({});
 export function UserContexProvider({ children }) {
     const [address, SetAddress] = useState("");
     const [userData, SetUserData]=useState({name:"",email:"",tel:""})
+    const [showModal, setShowModal]=useState(false)
   return (
-    <PizzaContex.Provider value={{ address, SetAddress,userData, SetUserData }}>
+    <UserDataContex.Provider value={{ address, SetAddress,userData, SetUserData,showModal, setShowModal }}>
       {children}
-    </PizzaContex.Provider>
+    </UserDataContex.Provider>
   );
 }

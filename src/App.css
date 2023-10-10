@@ -179,6 +179,89 @@ footer section h4{
   justify-content: space-between;
   align-items: center;
 }
+.Overfly{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.315);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.modal{
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 7px 6px 42px -7px rgba(0,0,0,0.68);
+-moz-box-shadow: 7px 6px 42px -7px rgba(0,0,0,0.68);
+box-shadow: 7px 6px 42px -7px rgba(0,0,0,0.68);
+}
+.modal .btn-cerrar{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  padding: 0;
+}
+.modal .btn-save{
+  width: 80px;
+  height: 30px;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  padding: 0;
+}
+.inp-modal{
+border: #3fae7f solid 1px;
+border-radius: 10px;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #3fae7f;
+height: 40px;
+margin-top: 10px;
+}
+.inp-modal label{
+  position: absolute;
+  background: none;
+  padding: 0;
+  left: 10%;
+  user-select: none;
+  pointer-events: none;
+}
+.modal input{
+  border-radius: inherit;
+  padding: 0;
+  width: 90%;
+  padding-left: 10px;
+  color: #717171;
+}
+.modal input:focus{
+border: none;
+outline: none;
+}
+.modal input:focus~label, .modal input:not(:placeholder-shown)~label{
+  top: -25%;
+  left: 1%;
+  font-size: 12px;
+  background-color: #fff;
+  padding-inline: 5px;
+}
+.modal input:not(:placeholder-shown){
+  background-color: #fff;
+}
+
 @media (max-width: 768px) {
   .no-mobil {
     display: none;
