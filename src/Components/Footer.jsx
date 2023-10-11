@@ -1,12 +1,13 @@
 export const Footer = () => {
   return (
     <footer>
-      <section className="footer-logo">
+      <div className="ft-principal">
+      <div className="footer-logo">
         <img 
           src="https://www.papajohns.cl/static/media/papa-johns-logo-new-white.b9d9a366aded5dc0f3db3f6ce9b270b7.svg"
           alt="Logo-PapaJohns"
         />
-      </section>
+      </div>
       <section>
         <h3>PAPA JOHN’S</h3>
         <h4>Comunicado COVID 19</h4>
@@ -37,7 +38,11 @@ export const Footer = () => {
         <h3>PAPA PUNTOS</h3>
         <h4>Únete al programa</h4>
       </section>
+      </div>
+
+      <div className="ft-credit">
       <h6 className="">@2023 GutSan. Todos los derechos reservados</h6>
+      </div>
     </footer>
   );
 };

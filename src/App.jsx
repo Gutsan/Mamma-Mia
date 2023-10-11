@@ -7,12 +7,15 @@ import { PizzaContexProvider } from "./Context/PizzasContext";
 import { Header } from "./Components/Header";
 import { Cart } from "./view/Cart";
 import { Footer } from "./Components/Footer";
+import { UserContexProvider } from "./Context/UserDataContex";
 
 function App() {
+
   return (
     <BrowserRouter>
       <PizzaContexProvider>
         <CardContexProvider>
+          <UserContexProvider>
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -20,6 +23,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
           </Routes>
           <Footer />
+          </UserContexProvider>
         </CardContexProvider>
       </PizzaContexProvider>
     </BrowserRouter>

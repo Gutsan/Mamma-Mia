@@ -2,8 +2,12 @@ import { Link } from "react-router-dom";
 import { ButtonCart } from "./ButtomCart";
 import { Searcher } from "./Searcher";
 import { CardAddress } from "./cardAddress";
+import { Modal } from "./Modal";
+import { useContext } from "react";
+import { UserDataContex } from "../Context/UserDataContex";
 
 export const Header = () => {
+  const {showModal}=useContext(UserDataContex)
   return (
     <header>
       <Link to="/">
@@ -15,6 +19,7 @@ export const Header = () => {
       <Searcher />
       <CardAddress />
       <ButtonCart />
+      {showModal?<Modal/>:""}
     </header>
   );
 };
