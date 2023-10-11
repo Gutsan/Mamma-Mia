@@ -11,6 +11,7 @@ import {
 import { CardCart } from "../Components/cardCart";
 import { CardContex } from "../Context/CardContex";
 import "./details.css";
+import { Alert } from "../Components/Alert";
 export const PizzaDetails = () => {
   const { pizzas } = useContext(PizzaContex);
   const { IdPizza } = useParams();
@@ -23,7 +24,7 @@ export const PizzaDetails = () => {
   const [total, setTotal] = useState(0);
   const classSelect = "inp-pizza inp-select";
   const classNoSelect = "inp-pizza inp-no-select";
-
+  const [showAlert,setShowAlert]=useState(false)
   useEffect(() => {
     const newTotal = quantity * valuePriceSelect;
     setTotal(newTotal);
@@ -63,7 +64,10 @@ export const PizzaDetails = () => {
         quantity,
         total
       );
+      setShowAlert(false)
       navigate("/");
+    }else{
+      setShowAlert(true)
     }
   };
   return (
@@ -129,6 +133,10 @@ export const PizzaDetails = () => {
             <IconShoppingCartPlus />
           </button>
         </div>
+        {showAlert?(
+        <Alert>
+            <p>Debes seleccionar un tamaño</p>
+          </Alert>):""}
       </section>
       <CardCart />
     </main>
