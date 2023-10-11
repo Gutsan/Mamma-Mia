@@ -49,7 +49,10 @@ export const Cart = () => {
               <h4>Tarjeta</h4>
             </div>
           </div>
-          <button>Confirmar pedido</button>
+          <div className="btns-cart">
+            <button>Volver</button>
+            <button>Confirmar pedido</button>
+          </div>
         </section>
       </section>
       <CardCart />

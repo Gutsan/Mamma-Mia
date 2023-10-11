@@ -111,15 +111,21 @@
   border: #717171 solid 1px;
   border-radius: 4px;
   font-size: 12px;
-  height: 1rem;
-  width: 10rem;
+  height: 2rem;
+  /* width: 10rem; */
   padding: 5px;
+  flex-grow: 1;
 }
 .form-dat-user {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 10px;
+}
+.btns-cart {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
 }
 @media (max-width: 768px) {
   .container-details-cart {
