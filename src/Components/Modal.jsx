@@ -1,41 +1,24 @@
-import { IconMapPin2, IconUser, IconX } from "@tabler/icons-react"
-import { useContext } from "react"
-import { UserDataContex } from "../Context/UserDataContex"
+/* eslint-disable react/prop-types */
+import { IconX } from "@tabler/icons-react";
+import { useContext } from "react";
+import { UserDataContex } from "../Context/UserDataContex";
+import { useNavigate } from "react-router-dom";
 
-export const Modal=()=>{
-    const {setShowModal}=useContext(UserDataContex)
-    const handleClickClose=()=>{
-        setShowModal(false)
-    }
-    return(
+export const Modal = ({ children }) => {
+  const { setShowModal } = useContext(UserDataContex);
+  const navigate = useNavigate();
+  const handleClickClose = () => {
+    setShowModal(false);
+    navigate("/");
+  };
+  return (
     <div className="Overfly">
-        <div className="modal">
-            <button onClick={handleClickClose} className="btn-cerrar"><IconX/></button>
-            <h2>Detalles de Entrega</h2>
-            <h3>DELIVERY</h3>
-            <div className="inp-modal">
-                <IconMapPin2/>
-                <input type="text" placeholder=""/>
-                <label>Dirección</label>
-            </div>
-            <h3>DATOS USUARIO</h3>
-            <div className="inp-modal">
-                <IconUser/>
-                <input type="text" placeholder=""/>
-                <label>Nombre</label>
-            </div>
-            <div className="inp-modal">
-                <IconUser/>
-                <input type="text" placeholder=""/>
-                <label>Correo</label>
-            </div>
-            <div className="inp-modal">
-                <IconUser/>
-                <input type="text" placeholder=""/>
-                <label>Télefono</label>
-            </div>
-            <button className="btn-save">Guardar</button>
-        </div>
+      <div className="modal">
+        <button onClick={handleClickClose} className="btn-cerrar">
+          <IconX />
+        </button>
+        {children}
+      </div>
     </div>
-    )
-}
+  );
+};

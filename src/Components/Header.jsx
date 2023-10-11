@@ -5,9 +5,13 @@ import { CardAddress } from "./cardAddress";
 import { Modal } from "./Modal";
 import { useContext } from "react";
 import { UserDataContex } from "../Context/UserDataContex";
+import { FormUser } from "./FormUser";
 
 export const Header = () => {
-  const {showModal}=useContext(UserDataContex)
+  const { showModal, setShowModal } = useContext(UserDataContex);
+  const handleClickClose = () => {
+    setShowModal(false);
+  };
   return (
     <header>
       <Link to="/">
@@ -19,7 +23,16 @@ export const Header = () => {
       <Searcher />
       <CardAddress />
       <ButtonCart />
-      {showModal?<Modal/>:""}
+      {showModal ? (
+        <Modal>
+          <FormUser />
+          <button className="btn-save" onClick={handleClickClose}>
+            Acpetar
+          </button>
+        </Modal>
+      ) : (
+        ""
+      )}
     </header>
   );
 };

@@ -1,13 +1,27 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 export const UserDataContex = createContext({});
 
 export function UserContexProvider({ children }) {
-    const [address, SetAddress] = useState("");
-    const [userData, SetUserData]=useState({name:"",email:"",tel:""})
-    const [showModal, setShowModal]=useState(false)
+  const [userData, SetUserData] = useState(
+    JSON.parse(localStorage.getItem("userData")) ?? {
+      name: "",
+      email: "",
+      tel: "",
+      address: "",
+    }
+  );
+  useEffect(() => {
+    const saveDataLocalStorage = (userData) => {
+      localStorage.setItem("userData", JSON.stringify(userData));
+    };
+    saveDataLocalStorage(userData);
+  }, [userData]);
+  const [showModal, setShowModal] = useState(false);
   return (
-    <UserDataContex.Provider value={{ address, SetAddress,userData, SetUserData,showModal, setShowModal }}>
+    <UserDataContex.Provider
+      value={{ userData, SetUserData, showModal, setShowModal }}
+    >
       {children}
     </UserDataContex.Provider>
   );

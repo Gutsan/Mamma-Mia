@@ -16,7 +16,6 @@ export const CardCart = () => {
           <IconTrash />
         </button>
       </div>
-
       {order.map((ord, index) => (
         <ElementCart
           key={ord.idOrder}
